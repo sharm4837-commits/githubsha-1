@@ -1,0 +1,16 @@
+def highest_element(arr):
+    freq = {}
+    for num in arr:
+        if num in freq:
+            freq[num] += 1
+        else:
+            freq[num] = 1
+    max_element = arr[0]
+    max_count = 0
+    for key in freq:
+        if freq[key] > max_count:
+            max_count = freq[key]
+            max_count = key
+    return max_element 
+arr = [1,2,2,3,3,3]
+print(highest_element(arr))                   
